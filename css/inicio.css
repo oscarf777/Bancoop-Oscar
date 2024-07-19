@@ -1,0 +1,137 @@
+/* Estilos generales del cuerpo del documento */
+body {
+    width: 100%;
+    align-items: center;
+    font-family: "Arial", sans-serif;
+    background: rgb(226, 141, 11);
+    background: radial-gradient(circle, rgba(226, 141, 11, 0.29175420168067223) 0%, rgba(195, 193, 193, 0.565) 100%);
+}
+
+/* Estilos para el encabezado */
+header {
+    width: 90%;
+    margin: 0 auto;
+    height: 350px;
+    margin-top: 10px;
+    border-radius: 10px 10px 0 0;
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container-img {
+    width: 100%;
+    height: 250px;
+    border: none;
+}
+.container-img img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Estilos para los enlaces en el encabezado */
+.enlaces {
+    width: 100%;
+    height: 70px;
+    background-color: #e28d0b;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    align-items: center;
+    border-top: 10px solid #000000;
+}
+
+.enlaces ul {
+    width: 100%;
+    display: flex;
+    color: #f7f7f7;
+    justify-content: space-around;
+    list-style: none;
+    font-size: clamp(12px, 4vw, 25px);
+}
+a {
+    text-decoration: none;
+    color: #f7f7f7;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h1, .card h3 {
+    margin: 20px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-img img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.card:hover .card-img img {
+    transform: scale(1.1);
+}
+
+button {
+    background-color: #e28d0b;
+    border: solid #000000 3PX;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+footer {
+    width: 90%;
+    margin: 0 auto;
+    color: #bebbbb;
+    height: 100px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #212121;
+}
