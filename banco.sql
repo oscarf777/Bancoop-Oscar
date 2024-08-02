@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-07-2024 a las 23:29:37
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Tiempo de generación: 02-08-2024 a las 20:55:23
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `banco`
 --
+CREATE DATABASE IF NOT EXISTS `banco` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `banco`;
 
 -- --------------------------------------------------------
 
@@ -95,6 +97,13 @@ CREATE TABLE `pqrs` (
   `Mensaje` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `pqrs`
+--
+
+INSERT INTO `pqrs` (`id`, `Nombres`, `Correo`, `Tipo`, `Mensaje`) VALUES
+(1, 'Kevin', 'sv158919@gmail.com', 'Queja', 'mal servicio');
+
 -- --------------------------------------------------------
 
 --
@@ -140,7 +149,8 @@ CREATE TABLE `registro` (
 INSERT INTO `registro` (`id`, `Nombres`, `Apellidos`, `Telefono`, `Correo`, `Contraseña`, `Rol`) VALUES
 (50, 'Oscar Fabian ', 'Andrade Sanchez', '3106009716', 'andradeoscarf911@gmail.com', 'Andrade5546', '1'),
 (51, 'Kevin Santiago', 'Vargas Quintero', '3132313157', 'sv158919@gmail.com', 'vargas11jr', '1'),
-(62, 'oscar acosta', 'lizcano guevara', '3134447941', 'luz@gmail.com', '789456123', '1');
+(62, 'oscar acosta', 'lizcano guevara', '3134447941', 'luz@gmail.com', '789456123', '1'),
+(63, 'Lua', 'Pedro', '3150042161', 'cabrera@gmail.com', '12345678', '1');
 
 -- --------------------------------------------------------
 
@@ -246,13 +256,13 @@ ALTER TABLE `beneficiarios`
 -- AUTO_INCREMENT de la tabla `pqrs`
 --
 ALTER TABLE `pqrs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `registro`
 --
 ALTER TABLE `registro`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- Restricciones para tablas volcadas
